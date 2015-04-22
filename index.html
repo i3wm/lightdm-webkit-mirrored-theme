@@ -1,0 +1,113 @@
+
+<!doctype HTML>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 40px;
+        }
+
+        body { 
+            background-color: #1c1c1c;
+            color: white;
+        }
+
+        #light-background {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            z-index: 0;
+        }
+
+        #dark-background {
+            background-color: #1c1c1c;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            bottom: 0;
+            width: 50%;
+            z-index: 0;
+        }
+
+        #left {
+            margin-right: 5px;
+            text-align: right;
+            color: #1c1c1c;
+            position: fixed;
+            top: 50%;
+            right: 50%;
+            transform: translateY(-50%);
+        }
+
+        #right {
+            margin-left: 5px;
+            text-align: left;
+            color: #fff;
+            width: 50%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+        }
+
+        input {
+            border: none;
+            background-color: transparent;
+
+        }
+        input#username {
+            border-bottom: 1px solid #1c1c1c;
+            color: #1c1c1c;
+            text-align: right;
+        }
+        input#password {
+            border-bottom: 1px solid #fff;
+            color: #fff;
+        }
+
+        .message {
+            position: absolute;
+            bottom: 0;
+        }
+        #message_right {
+            color: #fff;
+            margin-left: 5px;
+            left: 50%;
+        }
+        #message_left {
+            color: #1c1c1c;
+            margin-right: 5px;
+            right: 50%;
+            text-align: right;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+    </style>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="light-background"> </div><div id="dark-background"> </div>
+        <div id="left">
+            <input id="username" type="text" autofocus />
+        </div>
+        <div id="right">
+            <input id="password" type="password" />
+        </div>
+        <div id="message_left" class="message"></div>
+        <div id="message_right" class="message"></div>
+    </div>
+</body>
+</html>
